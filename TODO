@@ -1,0 +1,64 @@
+Label Definition
+===========
++ done
+- in progress/done partially
+! to be done
+? not sure if we want to do this
+
+1.1
+=======
+
+Admin Interface
+----------------------
++ replace system() calls to qrencode with PHP library call
++ specify SSID to be /removed/ from client config after successful installation
++ pre-fill inst admins mail addresses from eduroam DB if known (but allow override)
++ wired 802.1X configuration support
+- check and complain if an admin tries to upload a *server* certificate
+! allow custom outer ID for the static "shallow" tests (get around immediate outer reject)
+? wizard mode - should have a switch on every page (Feature)
+? control in which language notification emails are sent
+? support for TCS certificates (not require to upload the full chain)
+
+User interface
+--------------------
++ detect OS and make "featured download" of best match
++ remove hard-coded "TERENA" mentions on rollover and FAQ entries
++ better logo handling for DiscoJuice
++ Windows installers should give users a hint what to do if they downloaded the wrong installer
+
+Device modules
+-----------------------
++ Windows modules, correct the text about profiles to be installed if there is only one
++ Turn off TKIP for Linux
++ Wired support Apple OS X, Windows
++ remove bootstrap SSIDs: Apple OS X/iOS, Windows
+! Linux - remove bootstrap SSIDs
+! all OS: enable to configure transparent proxy detection
+
+Later
+=====
+Core
+----
+? Windows modules - NEA
+  (nobody seems to demand support for this)
+? easy re-branding for deployment (colours, logo)
+  (low priority: only relevant for non-eduroam uses of CAT)
+
+User Interface
+--------------
+! self-service troubleshooting for end-users
+  (standalone: postponed to beta phase or retrofit for 1.1.x)
+
+Device Modules
+--------------
+? Linux - big installer GUI (Feature)
+? Linux - WICD support
+          (postponed: WICD looks very dead at the moment)
+? Linux - SUSE XML variant support
+          (postponed: looks easy, but nobody actually asked for that)
+! Linux - Hotspot 2.0 / Passpoint support (wpa_supplicant only)
+          (blocked by: wpa_supplicant D-BUS API does not expose this property)
+! Linux - Wired 1X support
+          (blocked by: NetworkManager goes into undefined behaviour on non-1X
+          networks is 1X is configured)
